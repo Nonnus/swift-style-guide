@@ -131,7 +131,7 @@ someFunctionWithManyArguments(
     secondArgument: resultFromSomeFunction(),
     thirdArgument: someOtherLocalProperty)
 ```
-* **1.10b** When calling a function that has many parameters, prefer using that syntax to which Xcode, as of version 9.2, defaults.
+* **1.10b** When calling a function that has many parameters, put each argument on a separate line .
 
 ```swift
 someFunctionWithManyArguments(firstArgument: "Hello, I am a string",
