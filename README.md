@@ -36,6 +36,10 @@ This guide was last updated for Swift 4.1 on February 7, 2018.
 * **1.5** Do not place opening braces on new lines - we use the [1TBS style](https://en.m.wikipedia.org/wiki/Indentation_style#1TBS).
 
 ```swift
+protocol SomeProtocol {
+    func someProtocolMethod()
+}
+
 class SomeClass {
     let someConstant: SomeType
     var someVariable: SomeType
@@ -51,6 +55,12 @@ class SomeClass {
     }
 
     /* ... */
+}
+
+extension SomeClass: SomeProtocol {
+    func someProtocolMethod() {
+        /* ... */
+    }
 }
 ```
 
@@ -267,7 +277,6 @@ class RoundAnimatingButton: UIButton {
     func startAnimating() {
         let firstSubview = subviews.first
     }
-
 }
 
 // NOT PREFERRED
@@ -307,7 +316,6 @@ class ConnectionTableViewCell: UITableViewCell {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
-
 }
 
 // NOT PREFERRED
@@ -430,11 +438,9 @@ let lastName = name.lastName
 ```swift
 myFunctionWithEscapingClosure() { [weak self] (error) -> Void in
     // you can do this
-
     self?.doSomething()
 
     // or you can do this
-
     guard let strongSelf = self else {
         return
     }
