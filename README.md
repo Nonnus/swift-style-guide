@@ -4,7 +4,7 @@ Make sure to read [Apple's API Design Guidelines](https://swift.org/documentatio
 
 Specifics from these guidelines + additional remarks are mentioned below.
 
-This guide was last updated for Swift 4.0 on January 23, 2018.
+This guide was last updated for Swift 4.0 on February 7, 2018.
 
 ## Table Of Contents
 
@@ -100,7 +100,7 @@ func pancake(with syrup: Syrup) -> Pancake {
 }
 ```
 
-* **1.9** We follow Xcode's recommended indentation style (i.e. your code should not change if CTRL-I is pressed). When declaring a function that spans multiple lines, prefer using that syntax to which Xcode, as of version 7.3, defaults.
+* **1.9** We follow Xcode's recommended indentation style (i.e. your code should not change if CTRL-I is pressed). When declaring a function that spans multiple lines, prefer using that syntax to which Xcode, as of version 9.2, defaults.
 
 ```swift
 // Xcode indentation for a function declaration that spans multiple lines
