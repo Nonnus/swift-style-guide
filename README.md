@@ -37,6 +37,9 @@ This guide was last updated for Swift 4.0 on February 7, 2018.
 
 ```swift
 class SomeClass {
+    let someConstant: SomeType
+    var someVariable: SomeType
+    
     func someMethod() {
         if x == y {
             /* ... */
