@@ -136,7 +136,7 @@ someFunctionWithManyArguments(firstArgument: "Hello, I am a string",
                               thirdArgument: someOtherLocalProperty)
 ```
 
-* **1.11** When dealing with an implicit array or dictionary large enough to warrant splitting it into multiple lines, treat the `[` and `]` as if they were braces in a method, `if` statement, etc. Closures in a method should be treated similarly.
+* **1.11a** When dealing with an implicit array or dictionary large enough to warrant splitting it into multiple lines, treat the `[` and `]` as if they were braces in a method, `if` statement, etc. Closures in a method should be treated similarly.
 
 ```swift
 someFunctionWithABunchOfArguments(
@@ -152,6 +152,18 @@ someFunctionWithABunchOfArguments(
     someClosure: { parameter1 in
         print(parameter1)
     })
+```
+* **1.11b** When dealing with an implicit array or dictionary large enough to warrant splitting it into multiple lines, prefer using that syntax to which Xcode, as of version 9.2, defaults.
+
+```swift
+someFunctionWithABunchOfArguments(someStringArgument: "hello I am a string",
+                                  someArrayArgument: ["dadada daaaa daaaa dadada daaaa daaaa dadada daaaa daaaa",
+                                                      "string one is crazy - what is it thinking?"],
+                                  someDictionaryArgument: ["dictionary key 1": "some value 1, but also some more text here",
+                                                           "dictionary key 2": "some value 2"],
+                                  someClosure: { parameter1 in
+                                      print(parameter1)
+                                  })
 ```
 
 * **1.12** Prefer using local constants or other mitigation techniques to avoid multi-line predicates where possible.
