@@ -120,13 +120,20 @@ if myFirstValue > (mySecondValue + myThirdValue)
 }
 ```
 
-* **1.10** When calling a function that has many parameters, put each argument on a separate line with a single extra indentation.
+* **1.10a** When calling a function that has many parameters, put each argument on a separate line with a single extra indentation.
 
 ```swift
 someFunctionWithManyArguments(
     firstArgument: "Hello, I am a string",
     secondArgument: resultFromSomeFunction(),
     thirdArgument: someOtherLocalProperty)
+```
+* **1.10b** When calling a function that has many parameters, prefer using that syntax to which Xcode, as of version 9.2, defaults.
+
+```swift
+someFunctionWithManyArguments(firstArgument: "Hello, I am a string",
+                              secondArgument: resultFromSomeFunction(),
+                              thirdArgument: someOtherLocalProperty)
 ```
 
 * **1.11** When dealing with an implicit array or dictionary large enough to warrant splitting it into multiple lines, treat the `[` and `]` as if they were braces in a method, `if` statement, etc. Closures in a method should be treated similarly.
