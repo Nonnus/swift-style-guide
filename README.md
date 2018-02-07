@@ -154,7 +154,8 @@ someFunctionWithABunchOfArguments(
     ],
     someClosure: { parameter1 in
         print(parameter1)
-    })
+// Xcode indents to here for this kind of statement
+})
 ```
 * **1.11b** When dealing with an implicit array or dictionary large enough to warrant splitting it into multiple lines, prefer using that syntax to which Xcode, as of version 9.2, defaults.
 
@@ -166,7 +167,8 @@ someFunctionWithABunchOfArguments(someStringArgument: "hello I am a string",
                                                            "dictionary key 2": "some value 2"],
                                   someClosure: { parameter1 in
                                       print(parameter1)
-                                  })
+// Xcode indents to here for this kind of statement
+})
 ```
 
 * **1.12** Prefer using local constants or other mitigation techniques to avoid multi-line predicates where possible.
