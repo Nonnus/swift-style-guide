@@ -948,26 +948,26 @@ guard let thingThree = thingThree else {
 }
 ```
 
-* **3.11.7** Don’t use one-liners for `guard` statements.
+* **3.11.7** It's ok to use one-liners for `guard` statements if they have a single exit statement.
 
 
 ```swift
 // PREFERRED
+guard let thingOne = thingOne else { return }
+
+// ALSO OK
 guard let thingOne = thingOne else {
     return
 }
-
-// NOT PREFERRED
-guard let thingOne = thingOne else { return }
 ```
 
 ## 4. Documentation/Comments
 
 ### 4.1 Documentation
 
-If a function is more complicated than a simple O(1) operation, you should generally consider adding a doc comment for the function since there could be some information that the method signature does not make immediately obvious. If there are any quirks to the way that something was implemented, whether technically interesting, tricky, not obvious, etc., this should be documented. Documentation should be added for complex classes/structs/enums/protocols and properties. All `public` functions/classes/properties/constants/structs/enums/protocols/etc. should be documented as well (provided, again, that their signature/name does not make their meaning/functionality immediately obvious).
+If a function is more complicated than a simple operation, you should generally consider adding a doc comment for the function since there could be some information that the method signature does not make immediately obvious. If there are any quirks to the way that something was implemented, whether technically interesting, tricky, not obvious, etc., this should be documented. Documentation should be added for complex classes/structs/enums/protocols and properties. All `public` functions/classes/properties/constants/structs/enums/protocols/etc. should be documented as well (provided, again, that their signature/name does not make their meaning/functionality immediately obvious).
 
-After writing a doc comment, you should option click the function/property/class/etc. to make sure that everything is formatted correctly.
+After writing a doc comment, you **should** option click the function/property/class/etc. to make sure that everything is formatted correctly.
 
 Be sure to check out the full set of features available in Swift's comment markup [described in Apple's Documentation](https://developer.apple.com/library/tvos/documentation/Xcode/Reference/xcode_markup_formatting_ref/Attention.html#//apple_ref/doc/uid/TP40016497-CH29-SW1).
 
@@ -1049,20 +1049,16 @@ func myFunction() {
 
 * **4.2.1** Always leave a space after `//`.
 * **4.2.2** Always leave comments on their own line.
-* **4.2.3** When using `// MARK: - whatever`, leave a newline after the comment.
+* **4.2.3** When using `// MARK: - whatever`, leave a newline before the comment.
 
 ```swift
 class Pirate {
-
     // MARK: - instance properties
-
     private let pirateName: String
 
     // MARK: - initialization
-
     init() {
         /* ... */
     }
-
 }
 ```
