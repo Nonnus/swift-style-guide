@@ -438,7 +438,7 @@ myFunctionWithEscapingClosure() { [weak self] (error) -> Void in
 }
 ```
 
-* **3.1.7** Don't use labeled breaks.
+* **3.1.7** Don't use [labeled breaks](https://medium.com/@rwgrier/swift-labeled-statements-3624ff30e0e7).
 
 * **3.1.8** Don't place parentheses around control flow predicates.
 
