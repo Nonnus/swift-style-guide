@@ -475,14 +475,14 @@ imageView.setImageWithURL(url, type: .person)
 imageView.setImageWithURL(url, type: AsyncImageView.Type.person)
 ```
 
-* **3.1.10** Don’t use shorthand for class methods since it is generally more difficult to infer the context from class methods as opposed to `enum`s.
+* **3.1.10** Use shorthand for class methods where possible as long as it context is clear.
 
 ```swift
 // PREFERRED
-imageView.backgroundColor = UIColor.white
+imageView.backgroundColor = .white
 
 // NOT PREFERRED
-imageView.backgroundColor = .white
+imageView.backgroundColor = UIColor.white
 ```
 
 * **3.1.11** Prefer not writing `self.` unless it is required.
